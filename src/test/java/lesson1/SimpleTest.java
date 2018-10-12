@@ -16,8 +16,8 @@ public class SimpleTest {
 
     @Test
     public void SimpleTest() {
-        setProperty("webdriver.opera.driver", "src//main//resources//operadriver.exe");
-        WebDriver driver = new OperaDriver();
+        setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize(); //manage accept to work with another window
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.navigate().to("http//epam.github.io/jdi/index.html");
