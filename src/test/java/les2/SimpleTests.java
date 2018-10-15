@@ -20,11 +20,12 @@ public class SimpleTests extends testBase {
 
     }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void beforeMethod(){
         driver = new ChromeDriver();
         driver.manage().window().maximize(); //manage accept to work with another window
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
 
 
     }
@@ -37,7 +38,7 @@ public class SimpleTests extends testBase {
 
 
 
-    @Test
+    @Test(groups = "Group1")
     public void SimpleTest() {
 
 

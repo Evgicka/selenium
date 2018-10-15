@@ -1,23 +1,26 @@
-
 package les2;
+
 import base.testBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import DataProvider.dataProvider;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
 import static java.lang.System.setProperty;
 
-public class SimpleTest extends testBase {
+public class SimpleTestProvide extends testBase {
 
-    @Test(invocationCount = 3, threadPoolSize = 3)
-    public void SimpleTest1() {
-        //1
 
-        setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
+    @Test//(dataProvider = "simpleDataProvider", dataProviderClass = dataProvider.class)
+    public void SimpleTest() {
+//1
+
+
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize(); //manage accept to work with another window
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
@@ -40,4 +43,7 @@ public class SimpleTest extends testBase {
 
 
     }
+
+
 }
+
