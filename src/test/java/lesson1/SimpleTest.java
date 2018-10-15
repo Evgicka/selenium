@@ -20,7 +20,7 @@ public class SimpleTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize(); //manage accept to work with another window
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        driver.navigate().to("http//epam.github.io/jdi/index.html");
+        driver.navigate().to("https://epam.github.io/JDI/index.html");
         Assert.assertEquals(driver.getTitle(), "Home Page");
 
        // driver.close(); //active close windows, if last window - close browser
