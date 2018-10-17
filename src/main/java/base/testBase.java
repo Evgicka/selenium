@@ -18,7 +18,7 @@ public class testBase {
  @AfterSuite
     public void afterSuit(){
 
-     System.out.println("Test worked"  +  (currentTimeMillis() - time));
+     System.out.println("Test worked : "  +  (currentTimeMillis() - time) + " ms ");
 
     }
 }
