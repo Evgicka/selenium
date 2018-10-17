@@ -11,7 +11,7 @@
 
 
         <classes>
-            <class name="les2.SimpleTestProvide"/>
+            <class name="Les3.SimpleTestPageObject"/>
         </classes>
     </test>
 </suite>
