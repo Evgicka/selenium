@@ -1,6 +1,6 @@
 package les2;
 
-import base.testBase;
+import base.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,10 +9,10 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class SimpleTestProvide extends testBase {
+public class SimpleTestProvide extends TestBase {
 
 
-    @Test//(dataProvider = "simpleDataProvider", dataProviderClass = dataProvider.class)
+    @Test//(dataProvider = "simpleDataProvider", dataProviderClass = DataProvider.class)
     public void SimpleTest() {
 //1
 

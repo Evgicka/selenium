@@ -1,6 +1,7 @@
 
 package les2;
-import base.testBase;
+
+import base.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 import static java.lang.System.setProperty;
 
-public class SimpleTest extends testBase {
+public class SimpleTest extends TestBase {
 
     @Test(invocationCount = 3, threadPoolSize = 3)
     public void SimpleTest1() {

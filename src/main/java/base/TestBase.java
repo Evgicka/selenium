@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeSuite;
 import static java.lang.System.currentTimeMillis;
 import static java.lang.System.setProperty;
 
-public class testBase {
+public class TestBase {
 
     private long time;
 
