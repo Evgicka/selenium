@@ -1,6 +1,7 @@
 
 package les4;
 
+import base.SelenideTestBase;
 import base.TestBase;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
@@ -17,12 +18,12 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static java.lang.System.setProperty;
 import static org.testng.Assert.assertEquals;
 
-public class SimpleTestSelenide extends TestBase {
+public class SimpleTestSelenide extends SelenideTestBase {
 
     @Test
     public void SimpleTest1() {
         //1
-        setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
+        //setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
 
 
         //2
@@ -37,10 +38,10 @@ public class SimpleTestSelenide extends TestBase {
         $("[id = Name]").sendKeys("epam");
         $("[id = Password]").sendKeys("1234");
         $(".login [type = 'submit']").click();
-
+        $$(By.xpath(""));//for collections
         //5
         SelenideElement mainTitle = $("h3.main-title");
-        assertEquals(mainTitle.getText(), "EPAM FRAMEWORK WISHES...");
+        assertEquals(mainTitle.getText(), "EPAM FRAMEWORK WISHES…");
 
 
 
