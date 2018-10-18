@@ -20,8 +20,6 @@ public class HomePage {
     public void login(String name, String password){
         profileButton.click();
         login.sendKeys(name);
-
-
     }
 
 
