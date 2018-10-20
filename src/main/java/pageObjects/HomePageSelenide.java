@@ -4,6 +4,8 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 
+import static com.codeborne.selenide.Selenide.open;
+
 public class HomePageSelenide {
 
     @FindBy(css = ".profile-photo")
@@ -17,6 +19,12 @@ public class HomePageSelenide {
 
     @FindBy(css = "[type = 'submit']")
     public SelenideElement submit;
+
+    public void openPage(){
+        open("https://epam.github.io/JDI/index.html");
+
+    }
+
 
     public void login(String name, String password){
         profileButton.click();
